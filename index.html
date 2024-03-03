@@ -2,39 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" type="text/css">
   <link href="styles/style.css" rel="stylesheet" type="text/css">
-  <title>Dynamic Charts - SHO</title>
+  <title>Market Monitor</title>
 </head>
 <body>
 <center>
-  <h1>Dynamic Charts 🔭🌈</h1>
+  <h1>Market Monitor by Galetaire</h1>
 </center>
-<center>
-  <h5>Go back to the parent site: <a href="https://www.spainhousing.eu/" target="_blank">spainhousing.eu</a></h5>
-</center>
+<div id="title"><b>General state of the market</b></div>
+<div id="chart-wrapper"><canvas id="market"></canvas></div>
+<script src="data/market.js"></script>
 <p>This site is a proof of concept for dynamic charts. For more information, please visit this <a href="https://github.com/galetaire/chartdynamic" target="_blank">repository</a>.
-  <!-- Scripts with the charts-->
-<div id="title"><b>Land and building permits</b></div>
-<div id="chart-wrapper"><canvas id="land"></canvas></div>
-<script src="data/land.js"></script>
-<div id="title"><b>Number of home sales</b></div>
-<div id="chart-wrapper"><canvas id="sales"></canvas></div>
-<script src="data/sales.js"></script>
-<div id="title"><b>Rainbow model</b></div>
-<div id="chart-wrapper"><canvas id="rainbow"></canvas></div>
-<script src="data/rainbow.js"></script>
-<div id="title"><b>Change (%) in the cost of production</b></div>
-<div id="chart-wrapper"><canvas id="cost"></canvas></div>
-<script src="data/cost.js"></script>
-<!-- The following chart uses the chart.js 4.0 version. Prior charts are using 2.0. So we have to call the new
-versions from a different CDN, or the output chart will be distorted-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.umd.min.js"></script>
-<div id="title"><b>Multivariate model</b></div>
-<div id="chart-wrapper"><canvas id="multivariate"></canvas></div>
-<script src="data/multivariate_d3.js"></script>
+<br>
+<div id="title"><b>Bullbear model</b></div>
+<div id="chart-wrapper"><canvas id="bullbear"></canvas></div>
+<script src="data/bullbear.js"></script>
+<br>
+<div id="title"><b>10y IR model</b></div>
+<div id="chart-wrapper"><canvas id="tenyrir"></canvas></div>
+<script src="data/tenyrir.js"></script>
+<br>
+<div id="title"><b>10y IR model</b></div>
+<div id="chart-wrapper"><canvas id="tenyrinflation"></canvas></div>
+<script src="data/tenyrinflation.js"></script>
 <br>
 <!-- Footer-->
 <div id="footer">
@@ -45,7 +38,7 @@ versions from a different CDN, or the output chart will be distorted-->
 </div>
 <center>
   <small style={{ display: 'block', marginTop: '8rem' }}>
-<script>document.write(new Date().getFullYear())</script> ©HousingSpanish. Creative Commons Attribution-ShareAlike 4.0 International License.
+<script>document.write(new Date().getFullYear())</script> By Galetaire. Creative Commons Attribution-ShareAlike 4.0 International License.
 </small></center>
 </body>
 </html>

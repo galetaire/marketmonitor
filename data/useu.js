@@ -1,13 +1,13 @@
 //makeChart, calling the data and variables from the .csv file
-function makeChart(tenyrinflation) {
+function makeChart(useu) {
   var rangeStart = 0
   var rangeEnd = new Date().getFullYear() - 1989
-  var rangeLabels = tenyrinflation.map(function(d) {return d.year}).slice(rangeStart, rangeEnd);
-  var rangeOne = tenyrinflation.map(function(d) {return +d.b10y_us}).slice(rangeStart, rangeEnd);
-  var rangeTwo = tenyrinflation.map(function(d) {return +d.inflation}).slice(rangeStart, rangeEnd);
+  var rangeLabels = useu.map(function(d) {return d.year}).slice(rangeStart, rangeEnd);
+  var rangeOne = useu.map(function(d) {return +d.d_market_money}).slice(rangeStart, rangeEnd);
+  var rangeTwo = useu.map(function(d) {return +d.e_market_money}).slice(rangeStart, rangeEnd);
 
   Chart.defaults.font.size = 12;
-  var chart = new Chart('tenyrinflation', {
+  var chart = new Chart('useu', {
     options: {
         scales: {
           x: {
@@ -22,27 +22,26 @@ function makeChart(tenyrinflation) {
       labels: rangeLabels,
       datasets: [
         {
-          label: '10 year US bond',
+          label: 'EU market',
           type: 'line',
-          data: rangeOne,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          borderColor: 'rgba(0,0,0, 1)',
-          borderWidth: 2,
+          data: rangeTwo,
+          backgroundColor: 'rgba(0, 0, 205, 0.2)',
+          borderColor: 'rgba(0, 0, 205, 1)',
+          borderWidth: 1,
           pointStyle: 'circle',
-          pointRadius: 3,
+          pointRadius: 5,
           fill: false,
           tension: 0.4
         },
         {
-          label: 'US Inflation',
+          label: 'US Market',
           type: 'line',
-          data: rangeTwo,
-          backgroundColor: 'rgba(220,20,60, 0.5)',
-          borderColor: 'rgba(220,20,60, 1)',
-          borderWidth: 2,
-          showLine: true,
+          data: rangeOne,
+          backgroundColor: 'rgba(0,128,0, 0.2)',
+          borderColor: 'rgba(0, 128, 0, 1)',
+          borderWidth: 1,
           pointStyle: 'circle',
-          pointRadius: 3,
+          pointRadius: 5,
           fill: false,
           tension: 0.4
         }

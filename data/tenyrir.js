@@ -3,8 +3,8 @@ function makeChart(tenyrir) {
   var rangeStart = 0
   var rangeEnd = new Date().getFullYear() - 1989
   var rangeLabels = tenyrir.map(function(d) {return d.year}).slice(rangeStart, rangeEnd);
-  var rangeMarket = tenyrir.map(function(d) {return +d.b10y_us}).slice(rangeStart, rangeEnd);
-  var rangeMoney = tenyrir.map(function(d) {return +d.ir}).slice(rangeStart, rangeEnd);
+  var rangeOne = tenyrir.map(function(d) {return +d.b10y_us}).slice(rangeStart, rangeEnd);
+  var rangeTwo = tenyrir.map(function(d) {return +d.ir}).slice(rangeStart, rangeEnd);
 
   Chart.defaults.font.size = 12;
   var chart = new Chart('tenyrir', {
@@ -22,28 +22,29 @@ function makeChart(tenyrir) {
       labels: rangeLabels,
       datasets: [
         {
-          label: 'Markets adjusted to money stock, Base 2005',
+          label: '10 year US bond',
           type: 'line',
-          data: rangeMarket,
-          backgroundColor: 'rgba(0, 0, 0, 1)',
-          borderColor: 'rgba(0, 0, 0, 1)',
-          borderWidth: 1,
-          showLine: true,
-          pointStyle: 'line',
-          pointRadius: 2,
-          fill: false
+          data: rangeOne,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          borderColor: 'rgba(0,0,0, 1)',
+          borderWidth: 2,
+          pointStyle: 'circle',
+          pointRadius: 3,
+          fill: false,
+          tension: 0.4
         },
         {
-          label: 'Historical average',
+          label: 'Interest Rate, United States FED',
           type: 'line',
-          data: rangeMoney,
-          backgroundColor: 'rgba(0, 176, 240, 0.2)',
-          borderColor: 'rgba(0, 0, 0, 1)',
-          borderWidth: 1,
-          borderDash: [3,3],
+          data: rangeTwo,
+          backgroundColor: 'rgba(220,20,60, 0.5)',
+          borderColor: 'rgba(220,20,60, 1)',
+          borderWidth: 2,
+          showLine: true,
           pointStyle: 'circle',
-          pointRadius: 8,
-          fill: false
+          pointRadius: 3,
+          fill: false,
+          tension: 0.4
         }
       ]
     }

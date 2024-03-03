@@ -3,8 +3,8 @@ function makeChart(bullbear) {
   var rangeStart = 0
   var rangeEnd = new Date().getFullYear() - 1989
   var rangeLabels = bullbear.map(function(d) {return d.year}).slice(rangeStart, rangeEnd);
-  var rangeMarket = bullbear.map(function(d) {return +d.spread_6m_10y}).slice(rangeStart, rangeEnd);
-  var rangeMoney = bullbear.map(function(d) {return +d.mkt_mny_normalized_spread}).slice(rangeStart, rangeEnd);
+  var rangeOne= bullbear.map(function(d) {return +d.spread_6m_10y}).slice(rangeStart, rangeEnd);
+  var rangeTwo = bullbear.map(function(d) {return +d.market_mass_norm_spread}).slice(rangeStart, rangeEnd);
 
   Chart.defaults.font.size = 12;
   var chart = new Chart('bullbear', {
@@ -24,25 +24,27 @@ function makeChart(bullbear) {
         {
           label: 'Spread between the 6 month and 10 year US bond',
           type: 'line',
-          data: rangeMarket,
+          data: rangeOne,
           backgroundColor: 'rgba(220,20,60, 0.5)',
           borderColor: 'rgba(220,20,60, 1)',
           borderWidth: 2,
           showLine: true,
           pointStyle: 'circle',
           pointRadius: 3,
-          fill: false
+          fill: false,
+          tension: 0.4
         },
         {
           label: 'Market adjusted to the US bond spread',
           type: 'line',
-          data: rangeMoney,
+          data: rangeTwo,
           backgroundColor: 'rgba(0, 128, 0, 0.5)',
           borderColor: 'rgba(0,128,0, 1)',
           borderWidth: 2,
           pointStyle: 'circle',
           pointRadius: 3,
-          fill: false
+          fill: false,
+          tension: 0.4
         }
       ]
     }

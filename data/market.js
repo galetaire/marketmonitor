@@ -3,7 +3,7 @@ function makeChart(market) {
   var rangeStart = 0
   var rangeEnd = new Date().getFullYear() - 1989
   var rangeLabels = market.map(function(d) {return d.year}).slice(rangeStart, rangeEnd);
-  var rangeOne = market.map(function(d) {return +d.market_money}).slice(rangeStart, rangeEnd);
+  var rangeOne = market.map(function(d) {return +d.market_avg}).slice(rangeStart, rangeEnd);
   var rangeTwo = market.map(function(d) {return +d.market_mass_b100_2005}).slice(rangeStart, rangeEnd);
 
   Chart.defaults.font.size = 12;
@@ -31,7 +31,8 @@ function makeChart(market) {
           borderDash: [3,3],
           pointStyle: 'circle',
           pointRadius: 8,
-          fill: false
+          fill: false,
+          tension: 0.4
         },
         {
           label: 'Market average',

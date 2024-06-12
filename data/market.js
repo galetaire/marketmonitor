@@ -32,7 +32,6 @@ function makeChart(market) {
           pointStyle: 'circle',
           pointRadius: 8,
           fill: false,
-          tension: 0.4
         },
         {
           label: 'Market average',

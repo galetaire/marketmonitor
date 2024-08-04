@@ -22,10 +22,10 @@ function makeChart(market) {
       labels: rangeLabels,
       datasets: [
         {
-          label: 'Markets adjusted to money stock (Base 2005)',
+          label: 'US markets adjusted to money stock (Base 2005)',
           type: 'line',
           data: rangeTwo,
-          backgroundColor: 'rgba(0, 176, 240, 0.2)',
+          backgroundColor: 'rgba(0,128,0, 0.2)',
           borderColor: 'rgba(0, 0, 0, 1)',
           borderWidth: 1,
           borderDash: [3,3],

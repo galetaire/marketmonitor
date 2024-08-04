@@ -10,55 +10,102 @@
 </head>
 <body>
 <center>
-  <h1>Market Monitor by Galetaire</h1>
+  <h1>Market Monitor 🧭📈</h1>
 </center>
-<div id="title"><b>General state of the market</b></div>
-<div id="chart-wrapper"><canvas id="market"></canvas></div>
-<script src="data/market.js"></script>
-<p>This site is a proof of concept for dynamic charts. For more information, please visit this <a href="https://github.com/galetaire/chartdynamic" target="_blank">repository</a>.
-<br>
-<div id="title"><b>Bull and Bear market model</b></div>
-<div id="chart-wrapper"><canvas id="bullbear"></canvas></div>
-<script src="data/bullbear.js"></script>
-<br>
-<div id="title"><b>Interest Rate and the 10 year US bond</b></div>
-<div id="chart-wrapper"><canvas id="tenyrir"></canvas></div>
-<script src="data/tenyrir.js"></script>
-<br>
-<div id="title"><b>Inflation and the 10 year US bond</b></div>
-<div id="chart-wrapper"><canvas id="tenyrinflation"></canvas></div>
-<script src="data/tenyrinflation.js"></script>
-<br>
-<div id="title"><b>US and EU market rythm</b></div>
-<div id="chart-wrapper"><canvas id="useu"></canvas></div>
-<script src="data/useu.js"></script>
-<br>
-<div id="title"><b>Money printing</b></div>
-<div id="chart-wrapper"><canvas id="moneystock"></canvas></div>
-<script src="data/moneystock.js"></script>
-<br>
-<div id="title"><b>Dollar/Market</b></div>
-<div id="chart-wrapper"><canvas id="dollarmarket"></canvas></div>
-<script src="data/dollarmarket.js"></script>
-<br>
-<div id="title"><b>Euro/Market</b></div>
-<div id="chart-wrapper"><canvas id="euromarket"></canvas></div>
-<script src="data/euromarket.js"></script>
-<br>
-<div id="title"><b>Wealth Store</b></div>
-<div id="chart-wrapper"><canvas id="wealthstore"></canvas></div>
-<script src="data/wealthstore.js"></script>
-<br>
-<!-- Footer-->
-<div id="footer">
-  <div>
-      <span style="vertical-align: middle;">Created using <a href="https://www.chartjs.org/" target="_blank">Chart.js</a></span>
-      <img src="images\chartjs-logo.svg" style="vertical-align: middle;" width="20px"/>
+<hr> <!-- Horizontal black line -->
+<div class="index">
+    <ul>
+        <li><a href="#chapter1">1. Major indices</a></li>
+        <ul>
+            <li><a href="#section1-1">1.1. US and EU market rythm</a></li>
+            <li><a href="#section1-2">1.2. US markets - Path against the average</a></li>
+            <li><a href="#section1-3">1.3. US markets - Bull and Bear model</a></li>
+        </ul>
+        <li><a href="#chapter2">2. US Bonds</a></li>
+        <ul>
+            <li><a href="#section2-1">2.1. US interest rate and the 10 year US bond</a></li>
+            <li><a href="#section2-2">2.2. US inflation and the 10 year US bond</a></li>
+        </ul>
+        <li><a href="#chapter3">3. Money stock</a></li>
+        <ul>
+            <li><a href="#section3-1">3.1. Money growth - US dollar and Euro</a></li>
+            <li><a href="#section3-2">3.2. US dollar compared to the US markets</a></li>
+            <li><a href="#section3-2">3.3. Euro compared to the EU markets</a></li>
+        </ul>
+        <li><a href="#chapter4">4. Wealth storage</a></li>
+        <ul>
+            <li><a href="#section3-1">4.1. Wealth storage by asset class</a></li>
+        </ul>
+    </ul>
+</div>
+<hr> <!-- Horizontal black line -->
+<div class="section" id="chapter1">
+    <h2>1. Major Indices</h2>
+    <div id="section1-1">
+        <h3>1.1. US and EU market rythm</h3>
+        <div id="chart-wrapper"><canvas id="useu"></canvas></div>
+        <script src="data/useu.js"></script>
+    </div>
+    <div id="section1-2">
+        <h3>1.2. US markets - Path against the average</h3>
+        <div id="chart-wrapper"><canvas id="market"></canvas></div>
+        <script src="data/market.js"></script>
+        </div>
+    <div id="section1-3">
+        <h3>1.3. US markets - Bull and Bear model</h3>
+        <div id="chart-wrapper"><canvas id="bullbear"></canvas></div>
+        <script src="data/bullbear.js"></script>
+    </div>
   </div>
 </div>
+</div>
+<div class="section" id="chapter2">
+    <h2>2. US Bonds</h2>
+    <div id="section2-1">
+        <h3>2.1. US interest rate and the 10 year US bond</h3>
+        <div id="chart-wrapper"><canvas id="tenyrir"></canvas></div>
+        <script src="data/tenyrir.js"></script>
+        </div>
+    <div id="section2-2">
+        <h3>2.2. US inflation and the 10 year US bond</h3>
+        <div id="chart-wrapper"><canvas id="tenyrinflation"></canvas></div>
+        <script src="data/tenyrinflation.js"></script>
+    </div>
+  </div>
+</div>
+<div class="section" id="chapter3">
+    <h2>3. Money stock</h2>
+    <div id="section3-1">
+        <h3>3.1. Money stock growth - US dollar and Euro yearly % change</h3>
+        <div id="chart-wrapper"><canvas id="moneystock"></canvas></div>
+        <script src="data/moneystock.js"></script>
+        </div>
+    <div id="section3-2">
+        <h3>3.2. Evolution of the US dollar stock compared to the US markets</h3>
+        <div id="chart-wrapper"><canvas id="dollarmarket"></canvas></div>
+        <script src="data/dollarmarket.js"></script>
+    </div>
+  </div>
+  <div id="section3-3">
+      <h3>3.3. Evolution of the Euro stock compared to the EU markets</h3>
+      <div id="chart-wrapper"><canvas id="euromarket"></canvas></div>
+      <script src="data/euromarket.js"></script>
+  </div>
+</div>
+</div>
+<div class="section" id="chapter4">
+    <h2>4. Wealth storage</h2>
+    <div id="section4-1">
+        <h3>4.1. Wealth storage by asset class</h3>
+        <div id="chart-wrapper"><canvas id="wealthstore"></canvas></div>
+        <script src="data/wealthstore.js"></script>
+        </div>
+</div>
+<!-- Footer-->
 <center>
   <small style={{ display: 'block', marginTop: '8rem' }}>
-<script>document.write(new Date().getFullYear())</script> By Galetaire. Creative Commons Attribution-ShareAlike 4.0 International License.
+<script>document.write(new Date().getFullYear())</script> By Galetaire. Created using <a href="https://www.chartjs.org/" target="_blank">Chart.js</a>
+      <img src="images\chartjs-logo.svg" style="vertical-align: middle;" width="20px"/>
 </small></center>
 </body>
 </html>

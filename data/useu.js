@@ -34,7 +34,7 @@ function makeChart(useu) {
           tension: 0.4
         },
         {
-          label: 'US Market',
+          label: 'US market',
           type: 'line',
           data: rangeOne,
           backgroundColor: 'rgba(0,128,0, 0.2)',

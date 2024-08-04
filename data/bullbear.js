@@ -35,7 +35,7 @@ function makeChart(bullbear) {
           tension: 0.4
         },
         {
-          label: 'Market adjusted to the US bond spread',
+          label: 'US market adjusted to the US bond spread',
           type: 'line',
           data: rangeTwo,
           backgroundColor: 'rgba(0, 128, 0, 0.5)',

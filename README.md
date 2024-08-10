@@ -19,6 +19,7 @@ A set of macro charts to monitor the financial markets.
 * High Yield Spread: https://fred.stlouisfed.org/series/BAMLH0A0HYM2#0
 * Euribor	https://www.euribor-rates.eu/en/euribor-charts/
 * Dollar Index: https://www.investing.com/currencies/us-dollar-index-historical-data
+* Stores of wealth: https://www.savills.com/impacts/market-trends/the-total-value-of-global-real-estate-property-remains-the-worlds-biggest-store-of-wealth.html
 
 _Nota 1_: Les dades anuals de massa monetària fan referència a les dades de desembre de l'any. Per exemple, l'M3 d'euros de 2019, són les dades del mes de desembre de 2019.
 _Nota 2_: Les dades anuals de "Mercats" fan referència a les dades de desembre de l'any. Per exemple, el valor del Mercat de 2019, són les dades de valors del mes de desembre de 2019.

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var data = {
         labels: ['Residencial (i)', 'Títols de deute', 'Accions', 'PIB global', 'Terres agrícoles', 'Comercial (i)', 'Or', 'Bitcoin'],
         datasets: [{
-            label: 'Valor en bilions americans ($)',
+            label: 'Valor en bilions ($)',
             data: [258, 123, 109, 84, 35, 32, 12, 1], // Assuming the value for Bitcoin is 1 trillion
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',

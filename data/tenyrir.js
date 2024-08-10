@@ -22,27 +22,27 @@ function makeChart(tenyrir) {
       labels: rangeLabels,
       datasets: [
         {
-          label: '10 year US bond',
+          label: 'Títol de deute americana a 10 any',
           type: 'line',
           data: rangeOne,
-          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          backgroundColor: 'rgba(0, 0, 0, 0.2)',
           borderColor: 'rgba(0,0,0, 1)',
-          borderWidth: 2,
+          borderWidth: 1,
           pointStyle: 'circle',
-          pointRadius: 3,
+          pointRadius: 5,
           fill: false,
           tension: 0.4
         },
         {
-          label: 'Interest Rate, United States FED',
+          label: 'Tipus interès bancari, FED funds rate',
           type: 'line',
           data: rangeTwo,
-          backgroundColor: 'rgba(220,20,60, 0.5)',
-          borderColor: 'rgba(220,20,60, 1)',
-          borderWidth: 2,
+          backgroundColor: 'rgba( 230, 126, 34 , 0.5)',
+          borderColor: 'rgba( 230, 126, 34 , 1)',
+          borderWidth: 1,
           showLine: true,
           pointStyle: 'circle',
-          pointRadius: 3,
+          pointRadius: 5,
           fill: false,
           tension: 0.4
         }

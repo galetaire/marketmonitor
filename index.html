@@ -6,111 +6,126 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" type="text/css">
   <link href="styles/style.css" rel="stylesheet" type="text/css">
-  <title>Market Monitor</title>
+  <title>Bruixola dels mercats</title>
 </head>
 <body>
 <center>
-  <h1>Market Compass 🧭</h1>
+  <h1>Brúixola dels mercats 🧭</h1>
 </center>
 <hr> <!-- Horizontal black line -->
 <div class="index">
     <ul>
-        <li><a href="#chapter1">1. Major indices</a></li>
+        <li><a href="#chapter1">1. Principals Índexs</a></li>
         <ul>
-            <li><a href="#section1-1">1.1. US and EU market rythm</a></li>
-            <li><a href="#section1-2">1.2. US markets - Path against the average</a></li>
-            <li><a href="#section1-3">1.3. US markets - Bull and Bear model</a></li>
+            <li><a href="#section1-1">1.1. Ritme del mercat de EUA i la UE</a></li>
+            <li><a href="#section1-2">1.2. Mercats EUA - Tendència sobre la mitjana</a></li>
+            <li><a href="#section1-3">1.3. Mercats EUA - Model alcista i baixista</a></li>
         </ul>
-        <li><a href="#chapter2">2. US Bonds</a></li>
+        <li><a href="#chapter2">2. Títols de deute dels EUA</a></li>
         <ul>
-            <li><a href="#section2-1">2.1. US interest rate and the 10 year US bond</a></li>
-            <li><a href="#section2-2">2.2. US inflation and the 10 year US bond</a></li>
+            <li><a href="#section2-1">2.1. Tipus d'interès bancari i títols de deute a 10 anys</a></li>
+            <li><a href="#section2-2">2.2. Inflació i títols de deute a 10 anys</a></li>
         </ul>
-        <li><a href="#chapter3">3. Money stock</a></li>
+        <li><a href="#chapter3">3. Estoc monetari</a></li>
         <ul>
-            <li><a href="#section3-1">3.1. Money growth - US dollar and Euro</a></li>
-            <li><a href="#section3-2">3.2. US dollar compared to the US markets</a></li>
-            <li><a href="#section3-2">3.3. Euro compared to the EU markets</a></li>
+            <li><a href="#section3-1">3.1. Creixement monetari - Dòlar EUA i Euro</a></li>
+            <li><a href="#section3-2">3.2. Δ dòlar EUA comparat als mercats dels EUA</a></li>
+            <li><a href="#section3-2">3.3. Δ euro comparat als mercats de la UE</a></li>
         </ul>
-        <li><a href="#chapter4">4. Wealth storage</a></li>
+        <li><a href="#chapter4">4. Reserves de valor</a></li>
         <ul>
-            <li><a href="#section3-1">4.1. Wealth storage by asset class</a></li>
+            <li><a href="#section4-1">4.1. Reserves de valor per tipus d'actiu</a></li>
+            <li><a href="#section4-2">4.2. Rendiment a llarg termini segons actiu</a></li>
+            <li><a href="#section4-3">4.3. Rendiment a curt termini segons actiu</a></li>
         </ul>
     </ul>
 </div>
 <hr> <!-- Horizontal black line -->
 <div class="section" id="chapter1">
-    <h2>1. Major Indices</h2>
+    <h2>1. Principals Índexs</h2>
     <div id="section1-1">
-        <h3>1.1. US and EU market rythm</h3>
+        <h3>1.1. Ritme del mercat de EUA i la UE</h3>
         <div id="chart-wrapper"><canvas id="useu"></canvas></div>
         <script src="data/useu.js"></script>
     </div>
     <div id="section1-2">
-        <h3>1.2. US markets - Path against the average</h3>
+        <h3>1.2. Mercats EUA - Tendència sobre la mitjana</h3>
         <div id="chart-wrapper"><canvas id="market"></canvas></div>
         <script src="data/market.js"></script>
         </div>
     <div id="section1-3">
-        <h3>1.3. US markets - Bull and Bear model</h3>
+        <h3>1.3. Mercats EUA - Model alcista i baixista</h3>
         <div id="chart-wrapper"><canvas id="bullbear"></canvas></div>
         <script src="data/bullbear.js"></script>
+        <small>(A) Alcista o <i>Bull market</i> = Mercats (rosa) per sobre dels bons (fúcsia)</small>
+        <br>
+        <small>(B) Baixista o <i>Bear market</i> = Mercats (rosa) per sota dels bons (fúcsia)</small>
     </div>
   </div>
 </div>
 </div>
 <div class="section" id="chapter2">
-    <h2>2. US Bonds</h2>
+    <h2>2. Títols de deute dels EUA</h2>
     <div id="section2-1">
-        <h3>2.1. US interest rate and the 10 year US bond</h3>
+        <h3>2.1. Tipus d'interès bancari i títols de deute a 10 anys</h3>
         <div id="chart-wrapper"><canvas id="tenyrir"></canvas></div>
         <script src="data/tenyrir.js"></script>
         </div>
     <div id="section2-2">
-        <h3>2.2. US inflation and the 10 year US bond</h3>
+        <h3>2.2. Inflació i títols de deute a 10 anys</h3>
         <div id="chart-wrapper"><canvas id="tenyrinflation"></canvas></div>
         <script src="data/tenyrinflation.js"></script>
     </div>
   </div>
 </div>
 <div class="section" id="chapter3">
-    <h2>3. Money stock</h2>
+    <h2>3. Estoc monetari</h2>
     <div id="section3-1">
-        <h3>3.1. Money stock growth - US dollar and Euro yearly % change</h3>
+        <h3>3.1. Creixement monetari anual en % - Dòlar EUA i Euro</h3>
         <div id="chart-wrapper"><canvas id="moneystock"></canvas></div>
         <script src="data/moneystock.js"></script>
         </div>
     <div id="section3-2">
-        <h3>3.2. Evolution of the US dollar stock compared to the US markets</h3>
+        <h3>3.2. Δ dòlar EUA, en bilions americans, comparat als mercats dels EUA, en punts</h3>
         <div id="chart-wrapper"><canvas id="dollarmarket"></canvas></div>
         <script src="data/dollarmarket.js"></script>
     </div>
   </div>
   <div id="section3-3">
-      <h3>3.3. Evolution of the Euro stock compared to the EU markets</h3>
+      <h3>3.3. Δ euro, en bilions americans, comparat als mercats de la UE, en punts</h3>
       <div id="chart-wrapper"><canvas id="euromarket"></canvas></div>
       <script src="data/euromarket.js"></script>
   </div>
 </div>
 </div>
 <div class="section" id="chapter4">
-    <h2>4. Wealth storage</h2>
+    <h2>4. Reserves de valor</h2>
     <div id="section4-1">
-        <h3>4.1. Wealth storage by asset class</h3>
+        <h3>4.1. Reserves de valor per tipus d'actiu (<small>i = immobles</small>)</h3
         <div id="chart-wrapper"><canvas id="wealthstore"></canvas></div>
         <script src="data/wealthstore.js"></script>
         </div>
     <div id="section4-2">
-        <h3>4.1. Wealth storage by asset class</h3>
-        <div id="chart-wrapper"><canvas id="assets0"></canvas></div>
-        <script src="data/assets0.js"></script>
+        <h3>4.2. Vegades que diferents actius han multiplicat el seu valor ençà l'any 2000</h3>
+        <div id="chart-wrapper"><canvas id="assetslong"></canvas></div>
+        <script src="data/assetslong.js"></script>
+        <small>(A) Els retorns dels índexs no consideren dividends (<i>Total return index</i>).</small>
+        <br>
+        <small>(B) Els immobles no consideren les rendes per lloguer.</small>
+        <br>
+        <small>(C) El Bitcoin no està inclòs perquè el seu procés de capitalització és molt recent en el temps.</small>
+        <br>
+        <small>(D) La inflació tendria un múltiple d'1.8, qualsevol actiu per sota d'1.8 ha perdut enfront de la inflació de preus.</small>
+        </div>
+    <div id="section4-3">
+        <h3>4.3. Rendiment de diferents actius durant el <script>document.write(new Date().getFullYear())</script></h3>
+        <div id="chart-wrapper"><canvas id="assetsshort"></canvas></div>
+        <script src="data/assetsshort.js"></script>
         </div>
 </div>
 <!-- Footer-->
 <center>
   <small style={{ display: 'block', marginTop: '8rem' }}>
-<script>document.write(new Date().getFullYear())</script> By Galetaire. Created using <a href="https://www.chartjs.org/" target="_blank">Chart.js</a>
-      <img src="images\chartjs-logo.svg" style="vertical-align: middle;" width="20px"/>
-</small></center>
+<script>document.write(new Date().getFullYear())</script>, per Galetaire. Creat amb <a href="https://www.chartjs.org/" target="_blank">Chart.js</a> <img src="images\chartjs-logo.svg" style="vertical-align: middle;" width="20px"/>. Disponible a <a href="https://github.com/galetaire/marketmonitor" target="_blank">Github</a> <img src="images\github-mark.svg" style="vertical-align: middle;" width="20px"/></small></center>
 </body>
 </html>

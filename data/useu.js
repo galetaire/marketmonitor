@@ -22,7 +22,7 @@ function makeChart(useu) {
       labels: rangeLabels,
       datasets: [
         {
-          label: 'EU market',
+          label: 'Mercats de la UE',
           type: 'line',
           data: rangeTwo,
           backgroundColor: 'rgba(0, 0, 205, 0.2)',
@@ -34,11 +34,11 @@ function makeChart(useu) {
           tension: 0.4
         },
         {
-          label: 'US Market',
+          label: 'Mercats dels EUA',
           type: 'line',
           data: rangeOne,
-          backgroundColor: 'rgba(0,128,0, 0.2)',
-          borderColor: 'rgba(0, 128, 0, 1)',
+          backgroundColor: 'rgba(220,20,60, 0.2)',
+          borderColor: 'rgba(220,20,60, 1)',
           borderWidth: 1,
           pointStyle: 'circle',
           pointRadius: 5,

@@ -30,12 +30,12 @@ function makeChart(dollarmarket) {
       labels: rangeLabels,
       datasets: [
         {
-          label: 'US markets',
+          label: 'Mercats del EUA',
           yAxisID: 'right-y-axis',
           type: 'line',
           data: rangeTwo,
-          backgroundColor: 'rgba(0, 0, 205, 0.2)',
-          borderColor: 'rgba(0, 0, 205, 1)',
+          backgroundColor: 'rgba(220,20,60, 0.2)',
+          borderColor: 'rgba(220,20,60, 1)',
           borderWidth: 1,
           pointStyle: 'circle',
           pointRadius: 5,
@@ -43,7 +43,7 @@ function makeChart(dollarmarket) {
           tension: 0.4
         },
         {
-          label: 'Dollar stock',
+          label: 'Dòlar, massa monetària',
           yAxisID: 'left-y-axis',
           type: 'line',
           data: rangeOne,

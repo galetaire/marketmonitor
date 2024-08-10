@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var ctx = document.getElementById('wealthstore').getContext('2d');
 
     var data = {
-        labels: ['Immobles residencials', 'Títols de deute', 'Accions', 'PIB global', 'Terres agrícoles', 'Immobles comercials', 'Or', 'Bitcoin'],
+        labels: ['Residencial (i)', 'Títols de deute', 'Accions', 'PIB global', 'Terres agrícoles', 'Comercial (i)', 'Or', 'Bitcoin'],
         datasets: [{
-            label: 'Value in Billions ($)',
+            label: 'Valor en bilions americans ($)',
             data: [258, 123, 109, 84, 35, 32, 12, 1], // Assuming the value for Bitcoin is 1 trillion
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',

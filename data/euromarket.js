@@ -30,7 +30,7 @@ function makeChart(euromarket) {
       labels: rangeLabels,
       datasets: [
         {
-          label: 'EU markets',
+          label: 'Mercats de la UE',
           yAxisID: 'right-y-axis',
           type: 'line',
           data: rangeTwo,
@@ -43,12 +43,12 @@ function makeChart(euromarket) {
           tension: 0.4
         },
         {
-          label: 'Euro stock',
+          label: 'Euro, massa monetària',
           yAxisID: 'left-y-axis',
           type: 'line',
           data: rangeOne,
-          backgroundColor: 'rgba(0,128,0, 0.2)',
-          borderColor: 'rgba(0, 128, 0, 1)',
+          backgroundColor: 'rgba(46, 134, 193, 0.2)',
+          borderColor: 'rgba(46, 134, 193, 1)',
           borderWidth: 1,
           pointStyle: 'circle',
           pointRadius: 5,

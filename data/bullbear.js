@@ -22,27 +22,27 @@ function makeChart(bullbear) {
       labels: rangeLabels,
       datasets: [
         {
-          label: 'Spread between the 6 month and 10 year US bond',
+          label: 'Spread dels bons americans de 6 mesos i 10 anys',
           type: 'line',
           data: rangeOne,
-          backgroundColor: 'rgba(220,20,60, 0.5)',
-          borderColor: 'rgba(220,20,60, 1)',
-          borderWidth: 2,
+          backgroundColor: 'rgba( 131, 44, 142, 0.5)',
+          borderColor: 'rgba( 131, 44, 142, 1)',
+          borderWidth: 1,
           showLine: true,
           pointStyle: 'circle',
-          pointRadius: 3,
+          pointRadius: 5,
           fill: false,
           tension: 0.4
         },
         {
-          label: 'US market adjusted to the US bond spread',
+          label: 'Mercats EUA ajustats als bons americans (spread)',
           type: 'line',
           data: rangeTwo,
-          backgroundColor: 'rgba(0, 128, 0, 0.5)',
-          borderColor: 'rgba(0,128,0, 1)',
-          borderWidth: 2,
+          backgroundColor: 'rgba( 237, 92, 255 , 0.5)',
+          borderColor: 'rgba( 237, 92, 255 , 1)',
+          borderWidth: 1,
           pointStyle: 'circle',
-          pointRadius: 3,
+          pointRadius: 5,
           fill: false,
           tension: 0.4
         }

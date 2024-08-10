@@ -22,11 +22,11 @@ function makeChart(moneystock) {
       labels: rangeLabels,
       datasets: [
         {
-          label: 'Euro stock change',
+          label: 'Euro, variació en %',
           type: 'line',
           data: rangeTwo,
-          backgroundColor: 'rgba(0, 0, 205, 0.2)',
-          borderColor: 'rgba(0, 0, 205, 1)',
+          backgroundColor: 'rgba(46, 134, 193, 0.2)',
+          borderColor: 'rgba(46, 134, 193, 1)',
           borderWidth: 1,
           pointStyle: 'circle',
           pointRadius: 5,
@@ -34,7 +34,7 @@ function makeChart(moneystock) {
           tension: 0.4
         },
         {
-          label: 'Dollar stock change',
+          label: 'Dòlar, variació en %',
           type: 'line',
           data: rangeOne,
           backgroundColor: 'rgba(0,128,0, 0.2)',

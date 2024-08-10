@@ -3,7 +3,7 @@ function makeChart(assetslong) {
   var rangeStart = 1
   var rangeEnd = new Date().getFullYear() - 2012
   var rangeLabels = assetslong.map(function(d) {return d.actius}).slice(rangeStart, rangeEnd);
-  var rangeOne = assetslong.map(function(d) {return +d.Multiple}).slice(rangeStart, rangeEnd);
+  var rangeOne = assetslong.map(function(d) {return +d.multiple}).slice(rangeStart, rangeEnd);
 
 function getRandomColor(alpha = 0.3) {
     const r = Math.floor(Math.random() * 256);

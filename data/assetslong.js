@@ -1,8 +1,8 @@
 //makeChart, calling the data and variables from the .csv file
 function makeChart(assetslong) {
-  var rangeStart = 1
-  var rangeEnd = new Date().getFullYear() - 2012
-  var rangeLabels = assetslong.map(function(d) {return d.actius}).slice(rangeStart, rangeEnd);
+  var rangeStart = 0
+  var rangeEnd = new Date().getFullYear() - 2011
+  var rangeLabels = assetslong.map(function(d) {return d.actius2}).slice(rangeStart, rangeEnd);
   var rangeOne = assetslong.map(function(d) {return +d.multiple}).slice(rangeStart, rangeEnd);
 
 function getRandomColor(alpha = 0.3) {

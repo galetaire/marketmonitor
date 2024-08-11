@@ -6,7 +6,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" type="text/css">
   <link href="styles/style.css" rel="stylesheet" type="text/css">
-  <title>Bruixola dels mercats</title>
+  <title>Brúixola dels mercats 🧭</title>
 </head>
 <body>
 <center>
@@ -29,8 +29,8 @@
         <li><a href="#chapter3">3. Estoc monetari</a></li>
         <ul>
             <li><a href="#section3-1">3.1. Creixement monetari - Dòlar EUA i Euro</a></li>
-            <li><a href="#section3-2">3.2. Δ dòlar EUA comparat als mercats dels EUA</a></li>
-            <li><a href="#section3-2">3.3. Δ euro comparat als mercats de la UE</a></li>
+            <li><a href="#section3-2">3.2. Massa dòlar, comparat als mercats dels EUA</a></li>
+            <li><a href="#section3-2">3.3. Massa euro, comparat als mercats de la UE</a></li>
         </ul>
         <li><a href="#chapter4">4. Reserves de valor</a></li>
         <ul>
@@ -47,19 +47,25 @@
         <h3>1.1. Ritme del mercat de EUA i la UE</h3>
         <div id="chart-wrapper"><canvas id="useu"></canvas></div>
         <script src="data/useu.js"></script>
+        <small>(A) Ritme del mercat en proporció a la massa monetària de la seva moneda (<i>Punts índexs/euros o dòlars</i>).</small>
+        <br>
+        <small>(B) Mercats dels EUA considerats: Nasdaq, S&P500 i Dow Jones.</small>
+        <br>
+        <small>(C) Mercats de la Unió Europea considerats: DAX alemany i CAC 40 francès.</small>
     </div>
     <div id="section1-2">
         <h3>1.2. Mercats EUA - Tendència sobre la mitjana</h3>
         <div id="chart-wrapper"><canvas id="market"></canvas></div>
         <script src="data/market.js"></script>
+        <small>(A) Mitjana de desplaçament dels darrers 15 anys.</small>
         </div>
     <div id="section1-3">
         <h3>1.3. Mercats EUA - Model alcista i baixista</h3>
         <div id="chart-wrapper"><canvas id="bullbear"></canvas></div>
         <script src="data/bullbear.js"></script>
-        <small>(A) Alcista o <i>Bull market</i> = Mercats (rosa) per sobre dels bons (fúcsia)</small>
+        <small>(A) Alcista o <i>Bull market</i> = Mercats (vermell) per sobre dels bons (negre).</small>
         <br>
-        <small>(B) Baixista o <i>Bear market</i> = Mercats (rosa) per sota dels bons (fúcsia)</small>
+        <small>(B) Baixista o <i>Bear market</i> = Mercats (vermell) per sota dels bons (negre).</small>
     </div>
   </div>
 </div>
@@ -89,12 +95,14 @@
         <h3>3.2. Massa dòlar (M2SL), en bilions, comparat als mercats dels EUA, en punts</h3>
         <div id="chart-wrapper"><canvas id="dollarmarket"></canvas></div>
         <script src="data/dollarmarket.js"></script>
+        <small>(A) Valors en bilions de dòlars, bilions en el significat convencional de 10<sup>12</sup>.</small>
     </div>
   </div>
   <div id="section3-3">
       <h3>3.3. Massa euro (M3), en bilions, comparat als mercats de la UE, en punts</h3>
       <div id="chart-wrapper"><canvas id="euromarket"></canvas></div>
       <script src="data/euromarket.js"></script>
+      <small>(A) Valors en bilions d'euros, bilions en el significat convencional de 10<sup>12</sup>.</small>
   </div>
 </div>
 </div>
@@ -104,6 +112,7 @@
         <h3>4.1. Reserves de valor per tipus d'actiu (<small>i = immobles</small>)</h3
         <div id="chart-wrapper"><canvas id="wealthstore"></canvas></div>
         <script src="data/wealthstore.js"></script>
+        <small>(A) Valors en bilions de dòlars, bilions en el significat convencional de 10<sup>12</sup>.</small>
         </div>
     <div id="section4-2">
         <h3>4.2. Vegades que diferents actius han multiplicat el seu valor ençà l'any 2000</h3>

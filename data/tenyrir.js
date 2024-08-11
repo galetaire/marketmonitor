@@ -22,7 +22,7 @@ function makeChart(tenyrir) {
       labels: rangeLabels,
       datasets: [
         {
-          label: 'Títol de deute americana a 10 any',
+          label: 'Títol de deute americana a 10 anys',
           type: 'line',
           data: rangeOne,
           backgroundColor: 'rgba(0, 0, 0, 0.2)',

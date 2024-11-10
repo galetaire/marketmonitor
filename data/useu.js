@@ -3,8 +3,8 @@ function makeChart(useu) {
   var rangeStart = 0
   var rangeEnd = new Date().getFullYear() - 1989
   var rangeLabels = useu.map(function(d) {return d.year}).slice(rangeStart, rangeEnd);
-  var rangeOne = useu.map(function(d) {return +d.d_market_money}).slice(rangeStart, rangeEnd);
-  var rangeTwo = useu.map(function(d) {return +d.e_market_money}).slice(rangeStart, rangeEnd);
+  var rangeOne = useu.map(function(d) {return +d.d_market_money_b100_2005}).slice(rangeStart, rangeEnd);
+  var rangeTwo = useu.map(function(d) {return +d.e_market_money_b100_2005}).slice(rangeStart, rangeEnd);
 
   Chart.defaults.font.size = 12;
   var chart = new Chart('useu', {

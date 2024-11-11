@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
     var ctx = document.getElementById('wealthstore').getContext('2d');
 
     var data = {
-        labels: ['Residencial (i)', 'Títols de deute', 'Accions', 'PIB global', 'Terres agrícoles', 'Comercial (i)', 'Or', 'Bitcoin'],
+        labels: ['Residencial (i)', 'Títols de deute', 'Accions', 'Diners fiat', 'Terres agrícoles', 'Comercial (i)', 'Or', 'Bitcoin'],
         datasets: [{
             label: 'Valor en bilions ($)',
-            data: [258, 123, 109, 84, 35, 32, 12, 1], // Assuming the value for Bitcoin is 1 trillion
+            data: [258, 123, 109, 78, 35, 32, 12, 1.5], // Assuming the value for Bitcoin is 1 trillion
             backgroundColor: [
                 'rgba( 191, 98, 152 , 0.2)',
                 'rgba( 39, 145, 199 , 0.2)',

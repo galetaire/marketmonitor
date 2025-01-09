@@ -1,7 +1,7 @@
 //makeChart, calling the data and variables from the .csv file
 function makeChart(assetsshort) {
   var rangeStart = 0
-  var rangeEnd = new Date().getFullYear() - 2010
+  var rangeEnd = 2024 - 2010
   var rangeLabels = assetsshort.map(function(d) {return d.actius}).slice(rangeStart, rangeEnd);
   var rangeOne = assetsshort.map(function(d) {return +d.rendiment}).slice(rangeStart, rangeEnd);
 

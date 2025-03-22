@@ -29,5 +29,4 @@ _Nota 2_: Les dades anuals de "Mercats" fan referència a les dades de desembre 
 
 ## Website access
 
-The site: http://chart.galetaire/, is a Handshake domain, note that for resolving the handshake DNS you will need a resolver since most browsers today do not support it, consider using Fingertip:
-* https://github.com/imperviousinc/fingertip
+The site: http://market.galetaire/, is a Handshake domain, note that for resolving the handshake DNS you will need a resolver since most browsers do not support it, consider using Fingertip: https://github.com/imperviousinc/fingertip

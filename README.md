@@ -26,3 +26,8 @@ A set of macro charts to monitor the financial markets.
 _Nota 1_: Les dades anuals de massa monetària fan referència a les dades de desembre de l'any. Per exemple, l'M3 d'euros de 2019, són les dades del mes de desembre de 2019.
 
 _Nota 2_: Les dades anuals de "Mercats" fan referència a les dades de desembre de l'any. Per exemple, el valor del Mercat de 2019, són les dades de valors del mes de desembre de 2019.
+
+## Website access
+
+The site: http://chart.galetaire/, is a Handshake domain, note that for resolving the handshake DNS you will need a resolver since most browsers today do not support it, consider using Fingertip:
+* https://github.com/imperviousinc/fingertip

@@ -28,7 +28,7 @@ const backgroundColors = assetslong.map(() => getRandomColor());
       labels: rangeLabels,
       datasets: [
         {
-          label: 'Vegades que ha multiplicat el seu valor',
+          label: 'Creixement mitjà anual (%)',
           type: 'bar',
           data: rangeOne,
           backgroundColor: 'rgba( 46, 64, 83 , 0.2)',

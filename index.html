@@ -19,8 +19,9 @@
         <ul>
             <li><a href="#section1-1">1.1. Ritme del mercat de EUA i la UE</a></li>
             <li><a href="#section1-2">1.2. Mercats EUA - Tendència sobre la mitjana</a></li>
-            <li><a href="#section1-4">1.3. Mercats EUA - Rendiment anual</a></li>
-            <li><a href="#section1-3">1.4. Mercats EUA - Model alcista i baixista</a></li>
+            <li><a href="#section1-3">1.3. Mercats EUA - Rendiment anual</a></li>
+            <li><a href="#section1-4">1.4. Mercats EUA - Risc de correcció</a></li>
+            <li><a href="#section1-5">1.5. Mercats EUA - Model alcista i baixista</a></li>
         </ul>
         <li><a href="#chapter2">2. Títols de deute dels EUA</a></li>
         <ul>
@@ -31,7 +32,7 @@
         <ul>
             <li><a href="#section3-1">3.1. Creixement monetari - Dòlar EUA i Euro</a></li>
             <li><a href="#section3-2">3.2. Massa dòlar, comparat als mercats dels EUA</a></li>
-            <li><a href="#section3-2">3.3. Massa euro, comparat als mercats de la UE</a></li>
+            <li><a href="#section3-3">3.3. Massa euro, comparat als mercats de la UE</a></li>
         </ul>
         <li><a href="#chapter4">4. Reserves de valor</a></li>
         <ul>
@@ -59,14 +60,20 @@
         <script src="data/market.js"></script>
         <small>(A) Mitjana de desplaçament dels darrers 15 anys.</small>
         </div>
-        <div id="section1-3">
-            <h3>1.3. Mercats EUA - Rendiment anual</h3>
-            <div id="chart-wrapper"><canvas id="rendimentus"></canvas></div>
-            <script src="data/rendimentus.js"></script>
-            <small>(A) Mercats dels EUA considerats (índexs): Nasdaq Composite, S&P500 i Dow Jones.</small>
+    <div id="section1-3">
+        <h3>1.3. Mercats EUA - Rendiment anual</h3>
+        <div id="chart-wrapper"><canvas id="rendimentus"></canvas></div>
+        <script src="data/rendimentus.js"></script>
+        <small>(A) Mercats dels EUA considerats (índexs): Nasdaq Composite, S&P500 i Dow Jones.</small>
         </div>
     <div id="section1-4">
-        <h3>1.4. Mercats EUA - Model alcista i baixista</h3>
+            <h3>1.4. Risc de correcció: alt (valor positiu, màxim 5) o baix (valor negatiu, mínim -2.5)</h3>
+            <div id="chart-wrapper"><canvas id="indicador"></canvas></div>
+            <script src="data/indicador.js"></script>
+            <small>(A) Mercats dels EUA considerats (índexs): Nasdaq Composite, S&P500 i Dow Jones.</small>
+            </div>
+    <div id="section1-5">
+        <h3>1.5. Mercats EUA - Model alcista i baixista</h3>
         <div id="chart-wrapper"><canvas id="bullbear"></canvas></div>
         <script src="data/bullbear.js"></script>
         <small>(A) Alcista o <i>Bull market</i> = Mercats (vermell) per sobre dels bons (negre).</small>
@@ -127,7 +134,7 @@
         <small>(D) El PIB global anual seria de 84 bilions de dòlars, segons dades Savills.</small>
         </div>
     <div id="section4-2">
-        <h3>4.2. Vegades que diferents actius han multiplicat el seu valor ençà l'any 2000</h3>
+        <h3>4.2. Creixement mitjà anual de diferents actius ençà l'any 2000, en percentatge</h3>
         <div id="chart-wrapper"><canvas id="assetslong"></canvas></div>
         <script src="data/assetslong.js"></script>
         <small>(A) Els retorns dels índexs consideren els guanys per dividends, és a dir, son el <i>Total return index</i>.</small>
@@ -135,8 +142,6 @@
         <small>(B) Els immobles no consideren les rendes per lloguer.</small>
         <br>
         <small>(C) El Bitcoin no està inclòs perquè el seu procés de capitalització és molt recent en el temps.</small>
-        <br>
-        <small>(D) La inflació tendria un múltiple d'1.8, qualsevol actiu per sota d'1.8 ha perdut enfront de la inflació de preus.</small>
         </div>
 </div>
 <hr> <!-- Horizontal black line -->

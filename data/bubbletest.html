@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Chart with d3.csv</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <canvas id="bubbleChart" width="800" height="400"></canvas>
+    <script>
+        // Function to process data and create a chart
+        function makeChart(data) {
+            // Process the CSV data
+            const rangeStart = 0;
+            const rangeEnd = new Date().getFullYear() - 1989;
+
+            const rangeLabels = data.map(d => +d.year).slice(rangeStart, rangeEnd);
+            const rangeOne = data.map(d => +d.ir).slice(rangeStart, rangeEnd);
+            const rangeTwo = data.map(d => +d.spread_6m_10y).slice(rangeStart, rangeEnd);
+            const rangeThree = data.map(d => +d.market_mass_b100_2005).slice(rangeStart, rangeEnd);
+
+            const Corrections = [
+                { x: 4.10, y: -0.89, r: 10.6 },
+                { x: 1.83, y: 0.72, r: 10.7 },
+                { x: 1.93, y: 2.07, r: 6.5 },
+                { x: 1.67, y: 2.91, r: 8.6 },
+                { x: 3.89, y: 1.62, r: 11.4 },
+                { x: 0.13, y: 1.92, r: 9.3},
+                { x: 4.33, y: -0.09, r: 12.9}
+
+            ];
+
+            const BadYears = [
+                { x: 0.10, y: 2.63, r: 7.8 },
+                { x: 4.20, y: 2.69, r: 6.8 },
+                { x: 6.24, y: -0.03, r: 13.9 },
+                { x: 1.35, y: 2.61, r: 10.5 },
+                { x: 3.21, y: 0.73, r: 10 }
+            ];
+
+            // Prepare data for the bubble chart
+            const chartData = {
+                datasets: [
+                    {
+                        label: 'Correccions del mercat',
+                        data: Corrections,
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Rendiment positiu però per sota del 5%',
+                        data: BadYears,
+                        backgroundColor: 'rgba(10, 2, 12, 0.6)',
+                        borderColor: 'rgba(10, 2, 12, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Tots els anys',
+                        data: rangeLabels.map((year, index) => ({
+                            x: rangeOne[index],
+                            y: rangeTwo[index],
+                            r: rangeThree[index] /10 // Adjust size scaling
+                        })),
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    },
+                ]
+            };
+
+            // Create the chart
+            const ctx = document.getElementById('bubbleChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bubble',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return `x: ${context.raw.x}, y: ${context.raw.y}, size: ${context.raw.r}`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Tipus interes' },
+                            ticks: {
+                                callback: function (value) {
+                                    return value; // Display year values on x-axis
+                                }
+                            }
+                        },
+                        y: {
+                            title: { display: true, text: 'Spread dels bons de 6 mesos i 10 anys' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Load the CSV file and process it
+        d3.csv('https://raw.githubusercontent.com/galetaire/marketmonitor/main/market_data.csv')
+            .then(makeChart)
+            .catch(error => console.error('Error loading the CSV data:', error));
+    </script>
+</body>
+</html>

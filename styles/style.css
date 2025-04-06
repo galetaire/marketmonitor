@@ -65,6 +65,16 @@ h2.subtitle {
   color: #aaa;
 }
 
+a {
+  color: black; /* Change this to your desired link color */
+  text-decoration: none; /* Optional: removes underline */
+}
+
+a:hover {
+  color: SaddleBrown; /* Color when hovering over the link */
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
 .spoiler-content {
     display: none;
     margin-top: 10px;

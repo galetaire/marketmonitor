@@ -15,7 +15,7 @@
 <hr> <!-- Horizontal black line -->
 <div class="index">
     <ul>
-        <li><a href="#chapter1">1. Principals Índexs</a></li>
+        <li><a href="#chapter1">1. Índexs borsaris</a></li>
         <ul>
             <li><a href="#section1-1">1.1. Ritme del mercat de EUA i la UE</a></li>
             <li><a href="#section1-2">1.2. Mercats EUA - Tendència sobre la mitjana</a></li>
@@ -34,16 +34,21 @@
             <li><a href="#section3-2">3.2. Massa dòlar, comparat als mercats dels EUA</a></li>
             <li><a href="#section3-3">3.3. Massa euro, comparat als mercats de la UE</a></li>
         </ul>
-        <li><a href="#chapter4">4. Reserves de valor</a></li>
+        <li><a href="#chapter4">4. Mercat immobiliari</a></li>
         <ul>
-            <li><a href="#section4-1">4.1. Reserves de valor per tipus d'actiu</a></li>
-            <li><a href="#section4-2">4.2. Rendiment a llarg termini segons actiu</a></li>
+            <li><a href="#section4-1">4.1. Preu de l'habitatge en or</a></li>
+            <li><a href="#section4-2">4.2. Compravendes i hipoteques</a></li>
+        </ul>
+        <li><a href="#chapter5">5. Reserves de valor</a></li>
+        <ul>
+            <li><a href="#section5-1">5.1. Reserves de valor per tipus d'actiu</a></li>
+            <li><a href="#section5-2">5.2. Rendiment a llarg termini segons actiu</a></li>
         </ul>
     </ul>
 </div>
 <hr> <!-- Horizontal black line -->
 <div class="section" id="chapter1">
-    <h2>1. Principals Índexs</h2>
+    <h2>1. Índexs borsaris</h2>
     <div id="section1-1">
         <h3>1.1. Ritme del mercat de EUA i la UE</h3>
         <div id="chart-wrapper"><canvas id="useu"></canvas></div>
@@ -120,9 +125,22 @@
 </div>
 </div>
 <div class="section" id="chapter4">
-    <h2>4. Reserves de valor</h2>
+    <h2>4. Mercat immobiliari espanyol</h2>
     <div id="section4-1">
-        <h3>4.1. Reserves de valor per tipus d'actiu i capitalització mundial (<small>i = immobles</small>)</h3
+        <h3>4.1. Preu de l'habitatge en unces d'or</h3>
+        <div id="chart-wrapper"><canvas id="housegold"></canvas></div>
+        <script src="data/housegold.js"></script>
+    </div>
+    <div id="section4-2">
+        <h3>4.2. Compravendes i hipoteques</h3>
+        <div id="chart-wrapper"><canvas id="sales"></canvas></div>
+        <script src="data/sales.js"></script>
+    </div>
+</div>
+<div class="section" id="chapter5">
+    <h2>5. Reserves de valor</h2>
+    <div id="section5-1">
+        <h3>5.1. Reserves de valor per tipus d'actiu i capitalització mundial (<small>i = immobles</small>)</h3
         <div id="chart-wrapper"><canvas id="wealthstore"></canvas></div>
         <script src="data/wealthstore.js"></script>
         <small>(A) Valors en bilions de dòlars, bilions en el significat convencional de 10<sup>12</sup>.</small>
@@ -133,8 +151,8 @@
         <br>
         <small>(D) El PIB global anual seria de 84 bilions de dòlars, segons dades Savills.</small>
         </div>
-    <div id="section4-2">
-        <h3>4.2. Creixement mitjà anual de diferents actius ençà l'any 2000, en percentatge</h3>
+    <div id="section5-2">
+        <h3>5.2. Creixement mitjà anual de diferents actius ençà l'any 2000, en percentatge</h3>
         <div id="chart-wrapper"><canvas id="assetslong"></canvas></div>
         <script src="data/assetslong.js"></script>
         <small>(A) Els retorns dels índexs consideren els guanys per dividends, és a dir, son el <i>Total return index</i>.</small>

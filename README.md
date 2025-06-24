@@ -1,6 +1,6 @@
 ## Description
 
-A set of macro charts to monitor the financial markets.
+A set of macro charts to monitor the financial markets 🧭.
 
 ## Data sources
 
